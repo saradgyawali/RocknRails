@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+
+# all records
+get "/records" => "records#index"
+
+# form for a new record
+get "/records/new" => "records#new"
+
+# show page for a single record
+get "/records/:id" => "records#show"
+
+# create a record
+post "/records" => "records#create"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
